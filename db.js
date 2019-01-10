@@ -1,10 +1,10 @@
 var mongojs = require('mongojs');
 
-var databaseUrl = 'mongodb://202.139.192.107/tgr2019test';
-var collections = ['user'];
+var databaseUrl = 'mongodb://localhost/tgr2019test';
+var collections = ['users'];
 var option = {"auth":{"user":"admin","password":"trg"}}
 
-var connect = mongojs(databaseUrl, collections, option);
+var connect = mongojs(databaseUrl, collections);
 
 module.exports = {
     connect: connect
